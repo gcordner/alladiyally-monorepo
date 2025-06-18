@@ -1,0 +1,21 @@
+{
+  "require": {
+    "wpackagist-theme/twentytwentyfive": "*"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "extra": {
+    "installer-paths": {
+      "wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
+  }
+}
