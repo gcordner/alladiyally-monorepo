@@ -1,6 +1,6 @@
 {
   "require": {
-    "wpackagist-theme/twentytwentyfive": "*"
+    "wpackagist-theme/frost": "*"
   },
   "repositories": [
     {
