@@ -127,8 +127,8 @@
       }
     },
     "layout": {
-      "contentSize": "640px",
-      "wideSize": "1200px"
+      "contentSize": "960px",
+      "wideSize": "1300px"
     },
     "shadow": {
       "defaultPresets": false,
@@ -178,7 +178,7 @@
     },
     "typography": {
       "defaultFontSizes": false,
-      "dropCap": false,
+      "dropCap": true,
       "fluid": true,
       "fontFamilies": [
         {
@@ -221,22 +221,22 @@
         {
           "fluid": false,
           "name": "xSmall",
-          "size": "16px",
+          "size": "0.875rem",
           "slug": "x-small"
         },
         {
           "fluid": false,
           "name": "Small",
-          "size": "18px",
+          "size": "0.875rem",
           "slug": "small"
         },
         {
           "fluid": {
-            "min": "18px",
-            "max": "20px"
+            "min": "0.93rem",
+            "max": "1rem"
           },
           "name": "Medium",
-          "size": "20px",
+          "size": "1rem",
           "slug": "medium"
         },
         {
@@ -269,6 +269,15 @@
         {
           "fluid": {
             "min": "36px",
+            "max": "42px"
+          },
+          "name": "42px",
+          "size": "42px",
+          "slug": "max-42"
+        },
+        {
+          "fluid": {
+            "min": "40px",
             "max": "48px"
           },
           "name": "48px",
@@ -420,7 +429,10 @@
         }
       },
       "core/paragraph": {
-        "css": ".has-background {padding: 20px 30px;}"
+        "css": ".has-background {padding: 20px 30px;}",
+        "typography": {
+          "dropCap": true
+        }
       },
       "core/post-comments-form": {
         "css": "& input[type=submit] {width: auto;} & label {font-size: var(--wp--preset--font-size--x-small);}"
@@ -590,7 +602,7 @@
       },
       "h1": {
         "typography": {
-          "fontSize": "var(--wp--preset--font-size--max-36)",
+          "fontSize": "var(--wp--preset--font-size--max-42)",
           "fontFamily": "var(--wp--preset--font-family--bebas-neue)"
         }
       },
