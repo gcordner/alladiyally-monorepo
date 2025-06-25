@@ -3,18 +3,3 @@ Theme Name: Ultraholic
 Template: frost
 Author: Geoff Cordner
 */
-
-@media (max-width: 768px) {
-  figure.wp-block-image.alignwide {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    position: relative;
-  }
-
-  figure.wp-block-image.alignwide img {
-    width: 100vw;
-    height: auto;
-    display: block;
-  }
-}
