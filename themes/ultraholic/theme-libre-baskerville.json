@@ -83,7 +83,7 @@
           "slug": "base"
         },
         {
-          "color": "#363737",
+          "color": "#000000",
           "name": "Contrast",
           "slug": "contrast"
         },
@@ -127,8 +127,8 @@
       }
     },
     "layout": {
-      "contentSize": "728px",
-      "wideSize": "1120px"
+      "contentSize": "960px",
+      "wideSize": "1300px"
     },
     "shadow": {
       "defaultPresets": false,
@@ -185,15 +185,15 @@
           "fontFace": [
             {
               "fontDisplay": "block",
-              "fontFamily": "Spectral",
+              "fontFamily": "Libre Baskerville",
               "fontStretch": "normal",
               "fontStyle": "normal",
               "fontWeight": "100 900",
-              "src": ["file:./assets/fonts/spectral/Spectral-Regular.ttf"]
+              "src": ["file:./assets/fonts/LibreBaskerville-Regular.ttf"]
             }
           ],
-          "fontFamily": "Spectral, sans-serif",
-          "name": "Spectral",
+          "fontFamily": "Libre Baskerville, sans-serif",
+          "name": "Libre Baskerville",
           "slug": "primary"
         },
         {
@@ -232,11 +232,11 @@
         },
         {
           "fluid": {
-            "min": "1rem",
-            "max": "1.19rem"
+            "min": "0.93rem",
+            "max": "1rem"
           },
           "name": "Medium",
-          "size": "1.19rem",
+          "size": "1rem",
           "slug": "medium"
         },
         {

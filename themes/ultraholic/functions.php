@@ -13,18 +13,29 @@ add_action( 'after_setup_theme', function() {
 	add_theme_support( 'wp-block-styles' );
 } );
 
-// Enqueue local fonts
-add_action( 'wp_enqueue_scripts', function() {
-	// Adjust the path if your theme folder name is different.
-	$stylesheet_uri = get_stylesheet_directory_uri();
+add_action( 'wp_enqueue_scripts', function () {
+	$theme_dir = get_stylesheet_directory();
+	$theme_uri = get_stylesheet_directory_uri();
+	$css_dir   = $theme_dir . '/css/build/';
 
-	wp_enqueue_style(
-		'custom-fonts',
-		$stylesheet_uri . '/assets/fonts/fonts.css',
-		[], // No dependencies
-		null // No versioning
-	);
-} );
+	$css_file = null;
+
+	foreach (glob($css_dir . 'theme.min.*.css') as $file) {
+		$css_file = basename($file);
+		break; // take the first match
+	}
+
+	if ( $css_file ) {
+		wp_enqueue_style(
+			'ultraholic-theme-style',
+			$theme_uri . '/css/build/' . $css_file,
+			[],
+			filemtime($css_dir . $css_file)
+		);
+	}
+}, 20 );
+
+
 
 
 // add_action( 'init', function () {
