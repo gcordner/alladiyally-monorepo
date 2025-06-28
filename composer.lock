@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c2a852a6194fb6911ffb2d52dd51fb95",
+    "content-hash": "8b5bd1f6ee19ae0450bb22aa49206850",
     "packages": [
         {
             "name": "composer/installers",
@@ -153,31 +153,31 @@
             "time": "2024-06-24T20:46:46+00:00"
         },
         {
-            "name": "wpackagist-theme/twentytwentyfive",
-            "version": "1.2",
+            "name": "wpackagist-theme/frost",
+            "version": "1.0.10",
             "source": {
                 "type": "svn",
-                "url": "https://themes.svn.wordpress.org/twentytwentyfive/",
-                "reference": "1.2"
+                "url": "https://themes.svn.wordpress.org/frost/",
+                "reference": "1.0.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/twentytwentyfive.1.2.zip"
+                "url": "https://downloads.wordpress.org/theme/frost.1.0.10.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
             },
             "type": "wordpress-theme",
-            "homepage": "https://wordpress.org/themes/twentytwentyfive/"
+            "homepage": "https://wordpress.org/themes/frost/"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {},
-    "platform-dev": {},
+    "platform": [],
+    "platform-dev": [],
     "plugin-api-version": "2.6.0"
 }
