@@ -41,3 +41,13 @@ add_action( 'wp_enqueue_scripts', function () {
 // add_action( 'init', function () {
 // 	delete_option( 'wp_global_styles_' . get_stylesheet() );
 // } );
+
+register_block_pattern(
+    'ultraholic/posts-grid-2col',
+    [
+        'title'      => __( 'Grid of posts in two columns', 'ultraholic' ),
+        'categories' => [ 'posts' ],
+        'content'    => file_get_contents( get_stylesheet_directory() . '/patterns/posts-grid-2col.php' ),
+    ]
+);
+

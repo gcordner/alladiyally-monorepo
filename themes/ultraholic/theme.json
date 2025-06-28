@@ -286,6 +286,15 @@
         },
         {
           "fluid": {
+            "min": "48px",
+            "max": "56px"
+          },
+          "name": "56px",
+          "size": "56px",
+          "slug": "max-56"
+        },
+        {
+          "fluid": {
             "min": "42px",
             "max": "60px"
           },
@@ -602,7 +611,7 @@
       },
       "h1": {
         "typography": {
-          "fontSize": "var(--wp--preset--font-size--max-42)",
+          "fontSize": "var(--wp--preset--font-size--max-56)",
           "fontFamily": "var(--wp--preset--font-family--bebas-neue)"
         }
       },

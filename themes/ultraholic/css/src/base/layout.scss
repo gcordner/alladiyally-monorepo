@@ -21,3 +21,39 @@
         display: block;
     }
 }
+
+.wp-block-post-title {
+    text-align: center;
+    font-style: italic;
+
+    // Optional: add spacing or responsive sizing tweaks
+    margin-bottom: 1rem;
+}
+
+.entry-header {
+    text-align: center;
+}
+
+.wp-block-post-date {
+    margin: auto !important;
+    margin-top: -10px; // Adjust as needed
+    font-size: 0.875rem; // Smaller font size for date
+}
+
+.hide {
+    display: none !important;
+}
+
+// .wp-block-post-template {
+    //     display: grid;
+    //     grid-template-columns: repeat(2, 1fr); // 🔥 2 columns only
+    //     gap: 2rem;
+    //     margin-top: 2rem;
+    // }
+
+    // .wp-block-post.post-card {
+    //     background: var(--wp--preset--color--base, #fff);
+    //     padding: 1rem;
+    //     border: 1px solid var(--wp--preset--color--neutral-300, #ccc);
+    //     border-radius: 0.5rem;
+    // }

@@ -1,2 +1,3 @@
 // Import layout styles (includes alignwide mobile fix)
-@import "base/layout";
+@use "base/layout";
+@use "base/typography";
