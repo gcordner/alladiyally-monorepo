@@ -1,12 +1,12 @@
 <?php
 /**
- * Ultraholic functions and definitions.
+ * Alladiyally functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
- * @subpackage Ultraholic
- * @since Ultraholic 1.0
+ * @subpackage Alladiyally
+ * @since Alladiyally 1.0
  */
 // Enable block styles (required for theme.json support).
 add_action( 'after_setup_theme', function() {
@@ -27,7 +27,7 @@ add_action( 'wp_enqueue_scripts', function () {
 
 	if ( $css_file ) {
 		wp_enqueue_style(
-			'ultraholic-theme-style',
+			'Alladiyally-theme-style',
 			$theme_uri . '/css/build/' . $css_file,
 			[],
 			filemtime($css_dir . $css_file)
@@ -43,9 +43,9 @@ add_action( 'wp_enqueue_scripts', function () {
 // } );
 
 register_block_pattern(
-    'ultraholic/posts-grid-2col',
+    'Alladiyally/posts-grid-2col',
     [
-        'title'      => __( 'Grid of posts in two columns', 'ultraholic' ),
+        'title'      => __( 'Grid of posts in two columns', 'Alladiyally' ),
         'categories' => [ 'posts' ],
         'content'    => file_get_contents( get_stylesheet_directory() . '/patterns/posts-grid-2col.php' ),
     ]
