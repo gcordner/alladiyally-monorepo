@@ -1,6 +1,7 @@
 {
   "require": {
-    "wpackagist-theme/frost": "*"
+    "wpackagist-theme/blocksy": "*",
+    "wpackagist-plugin/blocksy-companion": "*"
   },
   "repositories": [
     {
@@ -10,12 +11,23 @@
   ],
   "extra": {
     "installer-paths": {
-      "wp-content/themes/{$name}/": ["type:wordpress-theme"]
+      "wp-content/themes/{$name}/": ["type:wordpress-theme"],
+      "wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
     }
   },
   "config": {
     "allow-plugins": {
       "composer/installers": true
     }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "wp theme activate blocksy",
+      "wp plugin activate blocksy-companion"
+    ],
+    "post-update-cmd": [
+      "wp theme activate blocksy",
+      "wp plugin activate blocksy-companion"
+    ]
   }
 }
