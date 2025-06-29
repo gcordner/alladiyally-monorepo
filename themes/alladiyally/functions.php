@@ -67,3 +67,8 @@ add_action('init', function() {
         }
     }
 });
+
+// add_action( 'init', function() {
+//     $patterns = WP_Block_Patterns_Registry::get_instance()->get_all_registered();
+//     error_log( "Registered patterns:\n" . implode( "\n", array_keys( $patterns ) ) );
+// } );
