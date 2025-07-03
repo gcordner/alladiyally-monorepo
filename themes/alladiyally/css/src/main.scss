@@ -1,3 +1,11 @@
-// Import layout styles (includes alignwide mobile fix)
+// Import theme values generated from theme.json
+@use "base/theme-values"
+as *;
+
+// Design system variables — including $size-medium
+@use "base/variables";
+
+// Core layout styles (uses $size-* from variables)
 @use "base/layout";
-// @use "base/typography";
+
+// Add any other style modules below

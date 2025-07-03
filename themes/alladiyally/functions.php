@@ -14,25 +14,28 @@ add_action( 'after_setup_theme', function() {
 } );
 
 add_action( 'wp_enqueue_scripts', function () {
-	$theme_dir = get_stylesheet_directory();
-	$theme_uri = get_stylesheet_directory_uri();
-	$css_dir   = $theme_dir . '/css/build/';
+    // Load WordPress core block styles — required for layout engine to work
+    wp_enqueue_style( 'wp-block-library' );
 
-	$css_file = null;
+    $theme_dir = get_stylesheet_directory();
+    $theme_uri = get_stylesheet_directory_uri();
+    $css_dir   = $theme_dir . '/css/build/';
 
-	foreach (glob($css_dir . 'theme.min.*.css') as $file) {
-		$css_file = basename($file);
-		break; // take the first match
-	}
+    $css_file = null;
 
-	if ( $css_file ) {
-		wp_enqueue_style(
-			'Alladiyally-theme-style',
-			$theme_uri . '/css/build/' . $css_file,
-			[],
-			filemtime($css_dir . $css_file)
-		);
-	}
+    foreach (glob($css_dir . 'theme.min.*.css') as $file) {
+        $css_file = basename($file);
+        break; // take the first match
+    }
+
+    if ( $css_file ) {
+        wp_enqueue_style(
+            'alladiyally-theme-style',
+            $theme_uri . '/css/build/' . $css_file,
+            [ 'wp-block-library' ], // make it dependent on core block styles
+            filemtime($css_dir . $css_file)
+        );
+    }
 }, 20 );
 
 
@@ -72,3 +75,4 @@ add_action('init', function() {
 //     $patterns = WP_Block_Patterns_Registry::get_instance()->get_all_registered();
 //     error_log( "Registered patterns:\n" . implode( "\n", array_keys( $patterns ) ) );
 // } );
+
