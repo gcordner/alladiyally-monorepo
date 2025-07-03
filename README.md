@@ -121,54 +121,5 @@ npm run dist
 Built by Geoff Cordner.  
 Based on the [Frost](https://frostwp.com/) WordPress theme.
 
-## 🛠 How to Restore a Block Template from Theme Files in WordPress FSE
 
-If you accidentally save a Full Site Editing (FSE) template like `home`, WordPress stores a version in the **database** that overrides the theme’s version (`home.html`). Simply “resetting” or “clearing customizations” in the Site Editor does **not** restore the file-based version — it just removes the content and often replaces it with a minimal blank template.
-
-### ✅ Goal
-
-Restore the `home.html` (or any template) from the active theme after a database override.
-
----
-
-### 🔧 Step-by-Step Instructions
-
-1. **Delete the template override from the database using WP-CLI:**
-
-   ```bash
-   wp post delete $(wp post list --post_type=wp_template --name=home --format=ids)
-   ```
-
-   This removes the `home` template stored in the database, allowing WordPress to fall back to the version defined in your theme’s `templates/home.html`.
-
-2. *(Optional)* **Flush template cache** if you're developing locally:
-
-   ```bash
-   wp cache flush
-   ```
-
-   Or manually clear transients, just to be safe.
-
-3. **Reload the Site Editor or front-end.**
-
-   WordPress will now use the theme’s file-based template (`home.html`), not the previously saved version.
-
----
-
-### 🧪 Confirm the Fix Worked
-
-Run this to check if the `home` template still exists in the database:
-
-```bash
-wp post list --post_type=wp_template --name=home
-```
-
-If nothing is returned, you're good — WordPress is using the template from the theme files.
-
----
-
-### 📌 Notes
-
-- This applies to any template or template part (`home`, `index`, `single`, `header`, etc.).
-- This behavior is expected (though confusing) in WordPress 6.0+.
 
