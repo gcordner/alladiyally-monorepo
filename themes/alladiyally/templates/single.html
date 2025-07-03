@@ -1,29 +1,33 @@
-<!-- wp:template-part {"slug":"header","theme":"alladiyally","tagName":"header","className":"site-header"} /-->
+<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header","theme":"alladiyally"} /-->
 
-<!-- wp:cover {"url":"http://alladiyally4.docksal.site/wp-content/uploads/2025/06/fruit-1024x576.jpg","id":33,"alt":"image of a bowl of fruit","dimRatio":0,"customOverlayColor":"#c2a9a0","isUserOverlayColor":false,"isDark":false,"sizeSlug":"large","layout":{"type":"constrained"}} -->
-<div class="wp-block-cover is-light"><img class="wp-block-cover__image-background wp-image-33 size-large" alt="image of a bowl of fruit" src="http://alladiyally4.docksal.site/wp-content/uploads/2025/06/fruit-1024x576.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim" style="background-color:#c2a9a0"></span><div class="wp-block-cover__inner-container"><!-- wp:heading {"textAlign":"center","level":1,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","fontSize":"max-72"} -->
-<h1 class="wp-block-heading has-text-align-center has-base-color has-text-color has-link-color has-max-72-font-size">Radishes</h1>
-<!-- /wp:heading --></div></div>
-<!-- /wp:cover -->
+<!-- wp:group {"tagName":"main","className":"alignwide","style":{"spacing":{"margin":{"top":"0"},"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|large"}}}} -->
+<main class="wp-block-group alignwide radishes" style="margin-top:0;padding-top:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--large)"><!-- wp:post-featured-image {"className":"alignwide"} /-->
+
+<!-- wp:group {"tagName":"article","layout":{"type":"default"}} -->
+<article class="wp-block-group"><!-- wp:group {"tagName":"header","className":"entry-header","style":{"spacing":{"blockGap":"10px"}},"layout":{"type":"constrained"}} -->
+<header class="wp-block-group entry-header"><!-- wp:post-title {"level":1} /--></header>
+<!-- /wp:group -->
+
+<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+
+<!-- wp:group {"tagName":"footer","className":"entry-footer hide","style":{"spacing":{"blockGap":"0px"}},"fontSize":"small","layout":{"type":"constrained"}} -->
+<footer class="wp-block-group entry-footer hide has-small-font-size"><!-- wp:post-terms {"term":"category","prefix":"In: "} /-->
+
+<!-- wp:post-terms {"term":"post_tag","prefix":"Tags: "} /--></footer>
+<!-- /wp:group --></article>
+<!-- /wp:group -->
 
 <!-- wp:group {"layout":{"type":"constrained"}} -->
-<div class="wp-block-group"><!-- wp:query {"queryId":21,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"taxQuery":null,"parents":[],"format":[]},"metadata":{"categories":["posts"],"patternName":"frost/posts-grid","name":"Grid of posts in three columns."},"className":"alignwide"} -->
-<div class="wp-block-query alignwide"><!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|small"}},"layout":{"type":"grid","columnCount":3}} -->
-<!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9"} /-->
+<div class="wp-block-group"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:post-navigation-link {"type":"previous"} /--></div>
+<!-- /wp:column -->
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small","margin":{"top":"30px"}}}} -->
-<div class="wp-block-group" style="margin-top:30px"><!-- wp:post-title {"isLink":true,"fontSize":"large"} /-->
-
-<!-- wp:post-excerpt {"moreText":"Read More →","showMoreOnNewLine":false,"excerptLength":100,"fontSize":"small"} /--></div>
-<!-- /wp:group -->
-<!-- /wp:post-template -->
-
-<!-- wp:query-pagination -->
-<!-- wp:query-pagination-previous /-->
-
-<!-- wp:query-pagination-next /-->
-<!-- /wp:query-pagination --></div>
-<!-- /wp:query --></div>
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:post-navigation-link {"textAlign":"right"} /--></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group --></main>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","theme":"alladiyally","tagName":"footer","className":"site-footer"} /-->
+<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer","theme":"alladiyally"} /-->
