@@ -1,6 +1,6 @@
-<!-- wp:template-part {"slug":"header","tagName":"header","className":"site-header","theme":"alladiyally"} /-->
+<!-- wp:template-part {"slug":"header","theme":"alladiyally","tagName":"header","className":"site-header"} /-->
 
-<!-- wp:group {"tagName":"main","className":"alignwide","style":{"spacing":{"margin":{"top":"0"},"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|large"}}}} -->
+<!-- wp:group {"tagName":"main","className":"alignwide radishes","style":{"spacing":{"margin":{"top":"0"},"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|large"}}}} -->
 <main class="wp-block-group alignwide radishes" style="margin-top:0;padding-top:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--large)"><!-- wp:post-featured-image {"className":"alignwide"} /-->
 
 <!-- wp:group {"tagName":"article","layout":{"type":"default"}} -->
@@ -30,4 +30,10 @@
 <!-- /wp:group --></main>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"site-footer","theme":"alladiyally"} /-->
+<!-- wp:group {"layout":{"type":"default"}} -->
+<div class="wp-block-group"><!-- wp:shortcode -->
+[fm_related_posts]
+<!-- /wp:shortcode --></div>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"alladiyally","tagName":"footer","className":"site-footer"} /-->
