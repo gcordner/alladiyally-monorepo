@@ -19,11 +19,26 @@
 ../wp-trackback.php
 ../xmlrpc.php
 
+# Ignore everything in wp-content/plugins except my custom ones
+plugins/*
+!plugins/your-custom-plugin-1/
+!plugins/your-custom-plugin-2/
+
+#Ignore mu-plugins, ai1wm backups, and other things 
+ai1wm-backups/*
+db.php
+mu-plugins/*
+
+# Ignore everything in wp-content/themes except my child theme
+themes/*
+!themes/alladiyally/
+
+
 # Ignore any uploads or cache
 uploads/
-plugins/
 *.log
 *.tmp
+*.sql
 .cache/
 node_modules/
 dist/
