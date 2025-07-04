@@ -1,12 +1,16 @@
 {
   "require": {
-    "wpackagist-theme/blocksy": "*",
-    "wpackagist-plugin/blocksy-companion": "*"
+    "wpackagist-theme/frost": "*",
+    "gcordner/former-model-related-posts": "dev-main"
   },
   "repositories": [
     {
       "type": "composer",
       "url": "https://wpackagist.org"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/gcordner/former-model-related-posts.git"
     }
   ],
   "extra": {
@@ -22,12 +26,12 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "wp theme activate blocksy",
-      "wp plugin activate blocksy-companion"
+      "wp theme activate frost",
+      "wp plugin activate former-model-related-posts"
     ],
     "post-update-cmd": [
-      "wp theme activate blocksy",
-      "wp plugin activate blocksy-companion"
+      "wp theme activate frost",
+      "wp plugin activate former-model-related-posts"
     ]
   }
 }
