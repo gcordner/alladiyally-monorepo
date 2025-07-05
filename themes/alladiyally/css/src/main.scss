@@ -8,4 +8,7 @@ as *;
 // Core layout styles (uses $size-* from variables)
 @use "base/layout";
 
+// Core layout styles (uses $size-* from variables)
+@use "base/header";
+
 // Add any other style modules below
