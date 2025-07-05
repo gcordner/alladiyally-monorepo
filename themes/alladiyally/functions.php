@@ -76,3 +76,27 @@ add_action('init', function() {
 //     error_log( "Registered patterns:\n" . implode( "\n", array_keys( $patterns ) ) );
 // } );
 
+// Simple sticky header CSS - no toggle, always on.
+function sticky_header_css() {
+    echo '<style>
+    .site-header.wp-block-template-part {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background: var(--wp--preset--color--white, #fff);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    /* Override the WordPress core gap rule for header */
+    :where(.wp-site-blocks) > .site-header.wp-block-template-part {
+        margin-block-start: 0 !important;
+    }
+    
+    /* And for the content after header */
+    :where(.wp-site-blocks) > .site-header.wp-block-template-part + * {
+        margin-block-start: 0 !important;
+    }
+    </style>';
+}
+add_action('wp_head', 'sticky_header_css');
+
